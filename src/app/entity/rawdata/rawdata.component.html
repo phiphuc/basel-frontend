@@ -1,0 +1,16 @@
+<div class=container>
+    <label>Tìm kiếm  bảng</label><br>
+    <nz-row>
+        <nz-col nzOffset = "1" nzSpan="6">
+            <nz-select
+            [(ngModel)]="selectedValue"
+            [compareWith]="compareFn"
+            (ngModelChange)="log($event)"
+            nzAllowClear
+            nzPlaceHolder="Choose"
+          >
+            <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.label"></nz-option>
+          </nz-select>
+        </nz-col>
+  </nz-row>
+  </div>

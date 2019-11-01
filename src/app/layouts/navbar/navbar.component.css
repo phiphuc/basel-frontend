@@ -1,0 +1,33 @@
+nav{
+    margin-bottom: 1em;
+}
+.bg-seabank {
+    background: #d92027
+}
+
+.logo-seabank{
+    /* box-shadow: 0 0 10px #d8b671; */
+    border: 1px solid #d8b671;;
+}
+
+nav , a{
+    color: #000000;
+}
+
+ul li{
+    padding: 0 .7em;
+}
+
+ul li a {
+    margin: 0 2px;
+    font-weight: bold;
+}
+
+ul li a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d8b671;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+  }
+ul li a:hover:after { transform: scaleX(1); }
