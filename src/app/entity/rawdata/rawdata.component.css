@@ -1,0 +1,33 @@
+#rawdata nz-select {
+    width: 100%;
+}
+
+#rawdata nz-col{
+    padding: 0 15px;
+}
+
+#rawdata nz-row.row-container{
+    margin: 1.5em 0;
+}
+
+#rawdata i.setting {
+    font-size: 26px;
+    cursor: pointer;
+    padding-top: 3px;
+    color: #d92027;
+}
+
+
+#rawdata ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#rawdata ul li{
+   padding: 0 5px;
+}
+
+#rawdata ul li:last-child {
+    padding: 0 25px;
+ }
+

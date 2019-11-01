@@ -11,6 +11,7 @@ import en from '@angular/common/locales/en';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { RawdataComponent } from './entity/rawdata/rawdata.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './entity/rawdata/search/search.component';
 
 registerLocaleData(en);
 
@@ -18,7 +19,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     NavbarComponent,
-    RawdataComponent
+    RawdataComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

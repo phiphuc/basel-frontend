@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RawdataComponent implements OnInit {
 
+  isVisible = false;
+  searchValue: string;
   constructor() { }
 
   ngOnInit() {
@@ -18,6 +20,20 @@ export class RawdataComponent implements OnInit {
 
   log(value: { label: string; value: string; age: number }): void {
     console.log(value);
+  }
+
+  showModal(): void {
+        this.isVisible = true;
+      }
+
+  handleOk(): void {
+      console.log('Button ok clicked!');
+      this.isVisible = false;
+  }
+  
+  handleCancel(): void {
+      console.log('Button cancel clicked!');
+      this.isVisible = false;
   }
 
 }

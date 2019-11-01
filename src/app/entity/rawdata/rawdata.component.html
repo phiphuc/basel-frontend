@@ -1,7 +1,8 @@
-<div class=container>
-    <label>Tìm kiếm  bảng</label><br>
-    <nz-row>
-        <nz-col nzOffset = "1" nzSpan="6">
+<div class="container" id="rawdata">
+    <nz-row class="row-container">
+      <label>Thông tin bảng</label><br>
+      <nz-row>
+        <nz-col nzOffset = "2" nzSpan="6">
             <nz-select
             [(ngModel)]="selectedValue"
             [compareWith]="compareFn"
@@ -12,5 +13,72 @@
             <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.label"></nz-option>
           </nz-select>
         </nz-col>
-  </nz-row>
+        <nz-col nzSpan="3">
+          <ul>
+            <li  (click)="showModal()">
+                <i nz-icon class="setting" nzType="setting" nzTheme="outline"></i>
+            </li>
+            <li (click)="showModal()">
+                <i nz-icon class="setting" nzType="file-search" nzTheme="outline" ></i>
+            </li>
+          </ul>
+        </nz-col>
+        <nz-col nzSpan="3">
+            
+        </nz-col>
+      </nz-row>
+    </nz-row>
+    <nz-row class="row-container">
+        <label>Tìm kiếm <i nz-icon nzType="down" nzTheme="outline"></i></label><br>
+        <nz-row>
+          <nz-col nzOffset = "3" nzSpan="4">
+            <span>Thông tin</span>
+              <nz-select
+              [(ngModel)]="selectedValue"
+              [compareWith]="compareFn"
+              (ngModelChange)="log($event)"
+              nzAllowClear
+              nzPlaceHolder="Choose"
+            >
+              <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.label"></nz-option>
+            </nz-select>
+          </nz-col>
+          <nz-col nzSpan="4">
+              <span>Toán tử</span>
+                <nz-select
+                [(ngModel)]="selectedValue"
+                nzAllowClear
+                nzPlaceHolder="Choose"
+              >
+              <nz-option nzValue="=" nzLabel="Gần bằng"></nz-option>
+              <nz-option nzValue="like" nzLabel="Bằng"></nz-option>
+              </nz-select>
+            </nz-col>
+            <nz-col nzSpan="4">
+                <span>Thông tin</span>
+                <input nz-input placeholder="Tìm kiếm" [(ngModel)]="searchValue" />
+            </nz-col>
+            <nz-col nzSpan="4">
+                <span>Toán tử</span>
+                <nz-select
+                [(ngModel)]="selectedValue"
+                nzAllowClear
+                nzPlaceHolder="Choose"
+              >
+              <nz-option nzValue="and" nzLabel="Và"></nz-option>
+              <nz-option nzValue="or" nzLabel="Hoặc"></nz-option>
+              </nz-select>
+            </nz-col>
+        </nz-row>
+        <nz-row>
+            <i nz-icon nzType="plus" nzTheme="outline"></i>
+        </nz-row>
+    </nz-row>
+    <!-- popup -->
+    <nz-modal nzWidth=800 [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+        <p>Content one</p>
+        <p>Content two</p>
+        <p>Content three</p>
+    </nz-modal>
+    <!-- end popup -->
   </div>

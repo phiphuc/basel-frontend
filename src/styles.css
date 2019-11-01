@@ -14,3 +14,24 @@ body, *{
 label{
     font-weight: bold;
 }
+
+.ant-modal-header{
+    background: #d92027;
+    text-align: center;
+}
+
+.ant-modal-close:focus, .ant-modal-close:hover {
+    outline: none;
+}
+
+.ant-modal-close-x{
+    display: none;
+}
+
+svg{
+    transition: all 0.5s;
+    transform-origin: 50% 50%;
+}
+svg:hover{
+    transform: scale(1.2);
+}

@@ -7,18 +7,18 @@ const routes: Routes = [
     path: 'rawdata',
     component: RawdataComponent
   },
-  {
-    path: 'profile',
-    loadChildren: './profile/profile.module#ProfileModule'
-  },
-  {
-    path: 'editor',
-    loadChildren: './editor/editor.module#EditorModule'
-  },
-  {
-    path: 'article',
-    loadChildren: './article/article.module#ArticleModule'
-  }
+  // {
+  //   path: 'profile',
+  //   loadChildren: './profile/profile.module#ProfileModule'
+  // },
+  // {
+  //   path: 'editor',
+  //   loadChildren: './editor/editor.module#EditorModule'
+  // },
+  // {
+  //   path: 'article',
+  //   loadChildren: './article/article.module#ArticleModule'
+  // }
 ];
 
 @NgModule({
