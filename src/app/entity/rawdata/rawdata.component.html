@@ -1,5 +1,5 @@
 <div class="container" id="rawdata">
-    <nz-row class="row-container">
+    <div>
       <label>Thông tin bảng</label><br>
       <nz-row>
         <nz-col nzOffset = "2" nzSpan="6">
@@ -27,11 +27,11 @@
             
         </nz-col>
       </nz-row>
-    </nz-row>
-    <nz-row class="row-container">
-        <label>Tìm kiếm <i nz-icon nzType="down" nzTheme="outline"></i></label><br>
+    </div>
+    <div>
+        <label>Tìm kiếm</label><br>
         <nz-row>
-          <nz-col nzOffset = "3" nzSpan="4">
+          <nz-col nzOffset = "2"  nzSpan="4">
             <span>Thông tin</span>
               <nz-select
               [(ngModel)]="selectedValue"
@@ -53,12 +53,12 @@
               <nz-option nzValue="=" nzLabel="Gần bằng"></nz-option>
               <nz-option nzValue="like" nzLabel="Bằng"></nz-option>
               </nz-select>
-            </nz-col>
-            <nz-col nzSpan="4">
+          </nz-col>
+          <nz-col nzSpan="4">
                 <span>Thông tin</span>
                 <input nz-input placeholder="Tìm kiếm" [(ngModel)]="searchValue" />
-            </nz-col>
-            <nz-col nzSpan="4">
+          </nz-col>
+          <nz-col nzSpan="4">
                 <span>Toán tử</span>
                 <nz-select
                 [(ngModel)]="selectedValue"
@@ -68,12 +68,65 @@
               <nz-option nzValue="and" nzLabel="Và"></nz-option>
               <nz-option nzValue="or" nzLabel="Hoặc"></nz-option>
               </nz-select>
+          </nz-col>
+          <nz-col nzSpan="1">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
             </nz-col>
+          <nz-col  nzSpan="1">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="svg-inline--fa fa-plus fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+          </nz-col>
+          <nz-col  nzSpan="1">
+              <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+          </nz-col>
         </nz-row>
         <nz-row>
-            <i nz-icon nzType="plus" nzTheme="outline"></i>
+          <nz-col nzOffset = "2" nzSpan="1">
+         </nz-col>
+         <nz-col nzSpan="1">
+         </nz-col>
         </nz-row>
-    </nz-row>
+    </div>
+    <div>
+      <nz-row>
+          <label>Kết quả</label>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus-circle" class="svg-inline--fa fa-plus-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"></path></svg>
+          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash-alt" class="svg-inline--fa fa-trash-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg>
+        </nz-row>
+        <nz-row>
+            <nz-table
+            #rowSelectionTable
+            nzShowSizeChanger
+            [nzData]="listOfAllData"
+            (nzCurrentPageDataChange)="currentPageDataChange($event)"
+          >
+            <thead>
+              <tr>
+                <th
+                nzShowCheckbox
+                nzShowRowSelection
+                [nzSelections]="listOfSelection"
+                [(nzChecked)]="isAllDisplayDataChecked"
+                [nzIndeterminate]="isIndeterminate"
+                (nzCheckedChange)="checkAll($event)"
+                ></th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of rowSelectionTable.data">
+                <td nzShowCheckbox [(nzChecked)]="mapOfCheckedId[data.id]" (nzCheckedChange)="refreshStatus()">
+                    <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="edit" class="svg-inline--fa fa-edit fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"></path></svg>
+                  </td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.age }}</td>
+                <td>{{ data.address }}</td>
+              </tr>
+            </tbody>
+          </nz-table>
+        </nz-row>
+      </div>
     <!-- popup -->
     <nz-modal nzWidth=800 [(nzVisible)]="isVisible" nzTitle="The first Modal" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
         <p>Content one</p>

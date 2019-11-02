@@ -31,7 +31,18 @@ label{
 svg{
     transition: all 0.5s;
     transform-origin: 50% 50%;
+    color: #d92027;
+    cursor: pointer;
 }
 svg:hover{
     transform: scale(1.2);
+}
+
+svg.svg-inline--fa{
+    width: 1.5em;
+
+}
+
+nz-row {
+    margin-bottom: 15px;
 }
