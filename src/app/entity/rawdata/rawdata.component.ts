@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class RawdataComponent implements OnInit {
 
   isVisible = false;
-  searchValue: string;
+  tableSelect: string
+
   constructor() { }
 
   ngOnInit() {
@@ -22,11 +23,9 @@ export class RawdataComponent implements OnInit {
     }
   }
 
-  optionList = [{ label: 'Lucy', value: 'lucy', age: 20 }, { label: 'Jack', value: 'jack', age: 22 }];
-  selectedValue = { label: 'Jack', value: 'jack', age: 22 };
-  compareFn = (o1: any, o2: any) => (o1 && o2 ? o1.value === o2.value : o1 === o2);
+  listTable = [{ id: '1', name: 'FCT_LOAN' }, { id: '2', name: 'FCT_LIM' }];
 
-  log(value: { label: string; value: string; age: number }): void {
+  changeTable(value: any): void {
     console.log(value);
   }
 

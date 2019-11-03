@@ -4,13 +4,12 @@
       <nz-row>
         <nz-col nzOffset = "2" nzSpan="6">
             <nz-select
-            [(ngModel)]="selectedValue"
-            [compareWith]="compareFn"
-            (ngModelChange)="log($event)"
+            [(ngModel)]="tableSelect"
+            (ngModelChange)="changeTable(tableSelect)"
             nzAllowClear
-            nzPlaceHolder="Choose"
+            nzPlaceHolder="Chọn bảng"
           >
-            <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.label"></nz-option>
+            <nz-option *ngFor="let option of listTable" [nzValue]="option" [nzLabel]="option.name"></nz-option>
           </nz-select>
         </nz-col>
         <nz-col nzSpan="3">
